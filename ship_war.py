@@ -1,4 +1,3 @@
-import sys
 import pygame
 from pygame.sprite import Group
 from Settings import Settings
@@ -15,8 +14,8 @@ def rungame():
     bullets = Group()
     
     while True:
-        game_functions.check_events(ship)
+        game_functions.check_events(ship,ai_settings,screen,bullets)
         ship.update()
-        bullets.update()
-        game_functions.update_screen(ai_settings,screen,ship)
+        game_functions.update_bullet(bullets)
+        game_functions.update_screen(ai_settings,screen,ship,bullets)
 rungame()

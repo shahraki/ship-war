@@ -2,7 +2,7 @@ import pygame
 from pygame.sprite import Sprite
 
 class Bullet(Sprite):
-    def __init__(self, screen , ai_settings, ship):
+    def __init__(self, ai_settings, screen, ship):
         super(Bullet,self).__init__()
         self.screen = screen
 
